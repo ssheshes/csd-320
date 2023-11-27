@@ -12,13 +12,13 @@ public class yangAssignment4 {
         String userInput1;
         String userInput2;
 
-        Scanner input = new Scanner(System.in);
-
-        // user input
-        System.out.print("Enter your first string: ");
-        userInput1 = input.nextLine();
-        System.out.print("Enter your second string: ");
-        userInput2 = input.nextLine();
+        try (Scanner input = new Scanner(System.in)) {
+            // user input
+            System.out.print("Enter your first string: ");
+            userInput1 = input.nextLine();
+            System.out.print("Enter your second string: ");
+            userInput2 = input.nextLine();
+        }
 
         // try except from W3Schools
         try {
@@ -30,7 +30,7 @@ public class yangAssignment4 {
                 System.out.println("Neither strings are substrings of the other.");
             }
         } catch (Exception e) {
-            System.out.println("Eror. Try again.");
+            System.out.println("Error. Try again.");
         }
     }
 }

@@ -9,11 +9,11 @@ public class yangAssignment3 {
 
         int userInput;
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("This is a game where 1 beats 3, 2 beats 1, and 3 beats 2.\n");
-        System.out.print("Choose a number between 1-3: ");
-        userInput = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("This is a game where 1 beats 3, 2 beats 1, and 3 beats 2.\n");
+            System.out.print("Choose a number between 1-3: ");
+            userInput = input.nextInt();
+        }
 
         // run the game
         switch (userInput) {
